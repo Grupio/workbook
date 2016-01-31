@@ -52,15 +52,35 @@ function XHRletrehozas()
     return http_request;
 }
 
-function description_load(description) {
-    var show_description = document.querySelector("#menu_description");
-    if (show_description.getElementsByClassName("show") == null)
-    {
-        show_description.classList.add("show");        
-        betolt(description,"menu_description");
+function description_load(buttonSelected, description) {
+    var tabContainer = document.getElementById("menu_description");
+    
+    //Elso lépés meg nézem hogy amire kattintottam aktiv e ha igen akkor elrejtem
+    var selectedButton = document.getElementById(buttonSelected);
+    if (selectedButton.classList.contains("selectedTabButton")) {
+        selectedButton.classList.remove("selectedTabButton");
+        tabContainer.classList.remove("show");
     }
-    else
-    {
-        document.getElementById("menu_description").style.height = "0px";
+    else {
+        //nem aktiv amire katintottam megnézem hogy van e láthato kontent
+        if (tabContainer.classList.contains("show")) {
+            //van láthato kontent el kell rejteni a focust a gombokrol
+            var tabButtonList = document.getElementById("tab_content");
+            var buttonList = tabButtonList.getElementsByTagName("aside");
+            for (var i = 0 ; i < buttonList.length; i++) {
+                var button = buttonList[i];
+                if (button.classList.contains("selectedTabButton")) {
+                    button.classList.remove("selectedTabButton");
+                }
+            }
+            selectedButton.classList.add("selectedTabButton");
+            betolt(description, "menu_description");
+        }
+        else {
+            //nincs kiválasztva semmi 
+            selectedButton.classList.add("selectedTabButton");
+            tabContainer.classList.add("show");
+            betolt(description, "menu_description");
+        }
     }
 }
