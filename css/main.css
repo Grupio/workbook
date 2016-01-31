@@ -1,0 +1,154 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    color:darkgray;
+    text-align: center;
+}
+
+#full_page {
+    width: 800px;
+    background: lightgray;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 48px;
+    height: inherit;
+}
+
+header {
+    position: fixed; left: 0; right: 0; top: 0;
+    width: 800px;
+    margin: auto;
+    padding: 0;
+    background: yellow;
+}
+/*MENŰ RÉSZ*/
+#menu-logo {
+    width: 150px;
+    height: 45px;
+    margin: 0px;
+    padding: 0;
+}
+#top-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+#top-menu li {
+    float: left;
+}
+#top-menu li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#top-menu li a:hover {
+    background-color: aquamarine;
+}
+#description_content {
+    background-color: fuchsia;
+}
+
+#description_content h1 {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+#description_content p {
+    padding: 0 20px;
+}
+
+#tab_content {
+    background-color: brown;
+    width: 800px;
+}
+
+.tab {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.tab aside{
+    float:left;
+    width: 180px;
+    margin: 10px;
+    padding: 0;
+    background-color: azure;
+}
+.tab h3 {
+    padding: 0;
+    margin: 5px 0px;
+}
+.tab p {
+    color: dimgrey;
+    font-size: 10px;
+    padding: 5px;
+}
+.tab:hover {
+    color: white;
+}
+.tab aside:hover {
+    background-color: black;
+}
+
+
+/* KITÖLTÉS KINÉZET */
+#menu_description {
+    height: 0;
+    background-color: green;
+    overflow: hidden;
+}
+
+#menu_description.show {
+    height: auto;    
+}
+
+#tab_menu {
+    background-color: darkgray;
+    margin: 0;
+    padding: 0;
+}
+#tab_menu ul {
+    list-style-type: none;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+#tab_menu li {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+#tab_menu li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+#tab_menu a:focus {
+    background-color: lightgrey;
+}
+#tab_description {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+#tab_description p {
+    margin-top: 0;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+/*KITÖLTÉS KINÉZET VÉGE*/
